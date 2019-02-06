@@ -39,7 +39,7 @@ class fire {
     
     show() {
         noStroke();
-        fill(244, 113, 66, this.life);
+        fill(this.R, this.B, this.G, this.life);
         ellipse(this.x, this.y, 16);
     }
     
