@@ -25,6 +25,9 @@ class fire {
         this.yv = random(-2,-3);
         this.g = 0.3;
         this.life = 255;
+        this.R = random(100, 255);
+        this.G = random(100, 255);
+        this.B = random(100, 255)
     }
     
     update() {
