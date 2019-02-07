@@ -1,9 +1,11 @@
 var i;
 function setup() {
-	createCanvas(1400, 700);
+	createCanvas(1300, 650);
 }
 var cricle = [];
 function draw() {
+	fill(#f);
+	text("");
 	if(mouseIsPressed){
 	var newn = new ball();
 	//if (cricle.length === 20){
