@@ -1,54 +1,48 @@
-let particles = [];
+var i;
 function setup() {
-  createCanvas(1000, 400);
+	createCanvas(400, 400);
+}
+var cricle = [];
+function draw() {
+	if(mouseIsPressed){
+	var newn = new ball();
+	//if (cricle.length === 20){
+	//cricle.splice(1,1);
+	//}
+	cricle.push(newn);
+}
+	background(20);
+	for(i = 0; i < cricle.length; i++){
+	 cricle[i].Anime();
+	}
 }
 
-function draw() {
-    background(10);
-    for (let i = 0; i < 10; i++) {
-    let p = new fire();
-    particles.push(p);
-    }
-    for (i = particles.length - 1; i > 0; i--){
-      particles[i].update();
-      particles[i].show();
-      if (particles[i].done()) {
-          particles.splice(i, 1);
-      }
-  }
-}
-class fire {
-    constructor() {
-        this.x = random(990,1000);
-        this.y = random(100,110);
-        this.xv = random(-18,-20);
-        this.yv = random(-2,-3);
-        this.g = 0.3;
-        this.life = 255;
-        this.R = random(100, 255);
-        this.G = random(100, 255);
-        this.B = random(100, 255)
-    }
-    
-    update() {
-        this.yv += this.g;
-        this.y += this.yv;
-        this.x += this.xv;
-        this.life -= 3;
-    }
-    
-    show() {
-        noStroke();
-        fill(193, 58, 0, this.life);
-        ellipse(this.x, this.y, 16);
-    }
-    
-    done() {
-        if(this.life < 0) {
-            return true;
-        }
-        else {
-            return false;
-        }
-    }
+class ball {
+	constructor() {
+		this.x = mouseX;
+		this.y = mouseY;
+		this.xd = random(-10, 10);
+		this.yd = random(-10, 10);
+		this.size = floor(random(10,20));
+		this.thisx = 400-(size/2);
+		this.thissx = size/2;
+	}
+	Anime() {
+		fill(255,255,255,100);
+		ellipse(this.x, this.y, this.size, this.size);
+		if (this.x <= 390) {
+			this.xd *= -1;
+		}
+		if (this.x >= 10) {
+			this.xd *= -1;
+		}
+		if (this.y <= 390) {
+			this.yd *= -1;
+		} 
+		if (this.y >= 10) {
+			this.yd *= -1;
+		}
+		this.x+=this.xd
+		this.y+=this.yd
+	}
 }
