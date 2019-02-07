@@ -30,13 +30,13 @@ class ball {
 	Anime() {
 		fill(255,255,255,100);
 		ellipse(this.x, this.y, this.size, this.size);
-		if (this.x <= width-10) {
+		if (this.x <= (width-10)) {
 			this.xd *= -1;
 		}
 		if (this.x >= 10) {
 			this.xd *= -1;
 		}
-		if (this.y <= hight-10) {
+		if (this.y <= (height-10)) {
 			this.yd *= -1;
 		} 
 		if (this.y >= 10) {
