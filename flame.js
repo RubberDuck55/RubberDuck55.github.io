@@ -4,7 +4,7 @@ function setup() {
 }
 var cricle = [];
 function draw() {
-	fill(#f);
+	fill(#ffffff);
 	text("");
 	if(mouseIsPressed){
 	var newn = new ball();
