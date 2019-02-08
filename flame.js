@@ -1,6 +1,6 @@
 var i;
 function setup() {
-	createCanvas(1300, 650);
+	createCanvas(1350, 650);
 }
 var cricle = [];
 function draw() {
