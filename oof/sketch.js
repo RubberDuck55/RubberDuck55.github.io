@@ -5,7 +5,7 @@ var click;
 function setup() {
 	createCanvas(1350, 650);
 	click = 1;
-	textMode(CENTER);
+	textAlign(CENTER);
 }
 var cricle = [];
 function draw() {
