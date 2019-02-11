@@ -10,7 +10,7 @@ function setup() {
 var cricle = [];
 function draw() {
 	if(click === 1){
-		text("Click To Make Bubbles", hight/2, width/2);
+		text("Click To Make Bubbles", height/2, width/2);
 	}
 	fill(255 ,255, 255);
 	text("");
