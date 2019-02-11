@@ -1,15 +1,22 @@
 //James Wood 2/10/2019 7:42
 //Writen in ES6
 var i;
+var click;
 function setup() {
 	createCanvas(1350, 650);
+	click = 1;
+	textMode(CENTER);
 }
 var cricle = [];
 function draw() {
+	if(click === 1){
+		text("Click To Make Bubbles", hight/2, width/2);
+	}
 	fill(255 ,255, 255);
 	text("");
 	if(mouseIsPressed){
 	var newn = new ball();
+	click = 0;
 	//if (cricle.length === 20){
 	//cricle.splice(1,1);
 	//}
