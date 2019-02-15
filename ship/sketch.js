@@ -28,16 +28,15 @@ function draw() {
 	 ship.update();
 	 ship.draw();
 	if(keyIsPressed === false) {
-									 ship.turning(0);
+			ship.turning(0);
 		        ship.boosting(false);
 									}
 }
 class Ship {
 constructor() {
- this.head = 0;
-	this.pos = createVector(200,200);
+        this.head = 0;
+	this.pos = createVector(width/2,height/2);
 	this.rotate = 0;
-	//this.rotate= 0;
 	this.size = 8;
 	this.vel = createVector(0,0);
 	this.acc = createVector(0,0);
