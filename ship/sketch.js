@@ -60,7 +60,7 @@ update() {
 	//text(this.rotate,10,40);
 	translate(this.pos);
  this.turn();
-	this.angle = p5.Vector.fromAngle(this.head,0.4);
+	this.angle = p5.Vector.fromAngle(this.head,10);
 	//this.angle.add(2,2);
 	this.vel.mult(0.93, 0.93);
 	this.boost();
