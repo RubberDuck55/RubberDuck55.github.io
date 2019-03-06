@@ -3,6 +3,11 @@ permalink: /404.html
 ---
 <html>
 <head>
+  <link rel="icon" href="https://raw.githubusercontent.com/RubberDuck55/RubberDuck55.github.io/master/favicon.png">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.2/p5.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.2/addons/p5.dom.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.2/addons/p5.sound.min.js"></script>
+    <meta charset="utf-8" />
   <title>404</title>
   <style>
     .blueTxt {
@@ -13,6 +18,58 @@ permalink: /404.html
 </head>
 <body>
   <h1 class="blueTxt">404 Page not found :(</h1>
-  
+  <script style= 'position: absolute;
+  top: 0;
+  left: 0;' >
+    let p = [],cam,move=0.00000001,potato,hdr;
+function preload() {
+ potato = loadImage('potato.jpg');
+	hdr = loadImage('HdrSkyCloudy004_JPG_4K.jpg');
+}
+function setup() {
+  createCanvas(windowWidth, windowHeight, WEBGL);
+	for(let i = 0; i < 600; i++){
+	 p.push(new ball());
+	}
+	cam = createCamera();
+}
+function windowResized() {
+  resizeCanvas(windowWidth, windowHeight);
+}
+function draw() {
+	 var X = map(mouseX, 0, width, -10, 10, true);
+	 //var Y = map(mouseY, 0, width, -50, 50, true);
+  background(183, 210, 255);
+	 texture(hdr);
+	 //translate(0,-100);
+		for(let ii = 0; ii < 600; ii++){
+	 	p[ii].show();
+}
+	 cam.setPosition(X,-X*0.40,0);
+	 cam.lookAt(0,0,10);
+
+}
+
+class ball {
+constructor() {
+	this.pos = createVector(random(-width,width), random(-height,height),random(-40,900));	
+}
+show(){
+	push();
+	translate(this.pos);
+	noStroke();
+	texture( potato );
+	//plane( 10 , 10 );
+	//rotateZ(frameCount * random(0.01,0.001));
+	//rotateX(frameCount * random(0.01,0.001));
+	//rotateY(frameCount * 0.01);
+ sphere(15);
+	//translate(this.pos.x+15,this.pos.y+30,this.pos.z+15);
+	//fill(51);
+	//box(30,10,100);
+	pop();
+}
+}
+  </script>
 </body>
 </html>
