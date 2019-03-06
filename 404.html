@@ -23,8 +23,8 @@ permalink: /404.html
   left: 0;' >
     let p = [],cam,move=0.00000001,potato,hdr;
 function preload() {
- potato = loadImage('potato.jpg');
-	hdr = loadImage('HdrSkyCloudy004_JPG_4K.jpg');
+ //potato = loadImage('potato.jpg');
+	//hdr = loadImage('HdrSkyCloudy004_JPG_4K.jpg');
 }
 function setup() {
   createCanvas(windowWidth, windowHeight, WEBGL);
@@ -58,7 +58,8 @@ show(){
 	push();
 	translate(this.pos);
 	noStroke();
-	texture( potato );
+	fill(100,100,100);
+	//texture( potato );
 	//plane( 10 , 10 );
 	//rotateZ(frameCount * random(0.01,0.001));
 	//rotateX(frameCount * random(0.01,0.001));
