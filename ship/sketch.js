@@ -1,7 +1,7 @@
 let ship;
 let ccanvas
 function setup() {
-  ccanvas = createCanvas(windowWidth, windowHeight);
+  createCanvas(windowWidth, windowHeight);
 	 ship = new Ship();
 }
 
@@ -19,7 +19,6 @@ function keyPressed() {
 }
 
 function draw() {
-	 ccanvas = createCanvas(windowWidth, windowHeight);
 	 fill(0, 30);
 	 noStroke();
 	 rect(0,0,width,height);
