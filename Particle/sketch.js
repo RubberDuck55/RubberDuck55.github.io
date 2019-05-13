@@ -1,4 +1,9 @@
 let particles = [];
+let smokeParticle;
+function preload() {
+  smokeParticle = loadImage('Particle/Smoke.png');
+}
+
 function setup() {
   createCanvas(400, 600);
 }
@@ -46,6 +51,7 @@ class Particle {
     show() {
         noStroke();
         fill(255, this.alpha);
-        ellipse(this.x, this.y, this.size);
+        image(this.x, this.y, this.size, this.size);
+        //ellipse(this.x, this.y, this.size);
     }
 }
