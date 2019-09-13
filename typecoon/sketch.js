@@ -8,6 +8,7 @@ var c;
 function setup() {
   c = createCanvas(windowWidth, windowHeight);
   c.drop(loadFile);
+  c.position(0,0);
 }
 
 function loadFile(file) {
