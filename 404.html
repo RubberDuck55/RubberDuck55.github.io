@@ -22,10 +22,7 @@ permalink: /404.html
   top: 0;
   left: 0;' >
     let p = [],cam,move=0.00000001,potato,hdr;
-function preload() {
- //potato = loadImage('potato.jpg');
-	//hdr = loadImage('HdrSkyCloudy004_JPG_4K.jpg');
-}
+
 function setup() {
   createCanvas(windowWidth, windowHeight, WEBGL);
 	for(let i = 0; i < 600; i++){
@@ -52,7 +49,7 @@ function draw() {
 
 class ball {
 constructor() {
-	this.pos = createVector(random(-width,width), random(-height,height),random(-40,900));	
+	this.pos = createVector(random(-windowWidth,windowWidth), random(-windowHeight,windowHeight),random(-40,900));	
 }
 show(){
 	push();
