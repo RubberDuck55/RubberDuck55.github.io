@@ -23,9 +23,9 @@ function parseURLParams(url) {
   var params = parseURLParams(window.location.href);
   id = document.createElement("h1");
   id.innerHTML = 'See it is that easy your password and username could have been logged. your username is: ' + params.un + " and your password is: " + params.pw;
-  div.appendChild(document.createElement('br'));
-  div.appendChild(document.createElement('br'));
-  div.appendChild(id);
+  document.body.appendChild(document.createElement('br'));
+  document.body.appendChild(document.createElement('br'));
+  document.body.appendChild(id);
 </script>
 </body>
 </html>
