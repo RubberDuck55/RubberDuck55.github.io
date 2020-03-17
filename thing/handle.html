@@ -1,9 +1,31 @@
 <html>
 <body>
-<form action="handle.php" method="post">
-UN <input type="text" name="username"><br>
-PW <input type="text" name="pw"><br>
-<input type="submit">
-</form>
+<script>
+function parseURLParams(url) {
+    var queryStart = url.indexOf("?") + 1,
+        queryEnd   = url.indexOf("#") + 1 || url.length + 1,
+        query = url.slice(queryStart, queryEnd - 1),
+        pairs = query.replace(/\+/g, " ").split("&"),
+        parms = {}, i, n, v, nv;
+
+    if (query === url || query === "") return;
+
+    for (i = 0; i < pairs.length; i++) {
+        nv = pairs[i].split("=", 2);
+        n = decodeURIComponent(nv[0]);
+        v = decodeURIComponent(nv[1]);
+
+        if (!parms.hasOwnProperty(n)) parms[n] = [];
+        parms[n].push(nv.length === 2 ? v : null);
+    }
+    return parms;
+}
+  var params = parseURLParams(window.location.href);
+  id = document.createElement("h1");
+  id.innerHTML = 'See it is that easy your password and username could have been logged. your username is: ' + params.un + " and your password is: " + params.pw;
+  div.appendChild(document.createElement('br'));
+  div.appendChild(document.createElement('br'));
+  div.appendChild(id);
+</script>
 </body>
 </html>
